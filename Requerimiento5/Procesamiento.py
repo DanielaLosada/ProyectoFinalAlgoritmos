@@ -7,8 +7,8 @@ from sklearn.metrics.pairwise import cosine_similarity
 from scipy.sparse import vstack
 from sklearn.feature_extraction.text import TfidfVectorizer
 
-from algoritmos import tfidf_similarity, doc2vec_similarity 
-from normalizacion5 import load_bibtex, preprocess
+from Algoritmos import tfidf_similarity, doc2vec_similarity 
+from Normalizacion import load_bibtex, preprocess
 
 # Función para comparar modelos y guardar resultados
 # Esta función compara los modelos de similitud TF-IDF y Doc2Vec
