@@ -16,8 +16,8 @@ def tfidf_similarity(abstracts, save_model=True):
     )
     tfidf_matrix = vectorizer.fit_transform(processed_abstracts)  # Calcular matriz TF-IDF
     
-    if save_model:
-        dump(vectorizer, "C:/Users/dani4/OneDrive/Escritorio/Ws8/ProyectoFinalAlgoritmos/Data/DataAlgoritmos/TFIDF_model.joblib")
+    #if save_model:
+     #   dump(vectorizer, "C:/Users/dani4/OneDrive/Escritorio/Ws8/ProyectoFinalAlgoritmos/Data/DataAlgoritmos/TFIDF_model.joblib")
     
     return cosine_similarity(tfidf_matrix)
 
@@ -34,8 +34,8 @@ def doc2vec_similarity(abstracts, save_model=True):
     model.build_vocab(tagged_data)
     model.train(tagged_data, total_examples=model.corpus_count, epochs=model.epochs)
     
-    if save_model:
-        model.save("C:/Users/dani4/OneDrive/Escritorio/Ws8/ProyectoFinalAlgoritmos/Data/DataAlgoritmos/Doc2vec_model.model")
+   # if save_model:
+    #    model.save("C:/Users/dani4/OneDrive/Escritorio/Ws8/ProyectoFinalAlgoritmos/Data/DataAlgoritmos/Doc2vec_model.model")
     
     top_n = 1000
     similarity_matrix = []
